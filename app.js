@@ -7,7 +7,7 @@ app.get('', (req, res)=>{
 	res.send('It works!');
 });
 
-const port = process.env.PORT | 4000;
+const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
 	console.log(`Start application on port: ${port}`);
