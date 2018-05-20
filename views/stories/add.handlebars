@@ -1,0 +1,46 @@
+<h1>Add story</h1>
+<div class="row">
+	<form action="/stories" method="post">
+		<div class="row">
+			<div class="input-field">
+				<input type="text" name="title" id="title" value=""/>
+				<label for="title">Text Input:</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field">
+				<h5>Tell us your story</h5>
+				<textarea name="body"></textarea>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<select name="status">
+					<option value="public" selected>Public</option>
+					<option value="private">Private</option>
+					<option value="unpublished">Unpublished</option>
+				</select>
+				<label for="title">Text Input:</label>
+			</div>
+			<div class="input-field col s12 m6">
+				<span class="center">Alow comments:</span>
+				<div class="switch center">
+				    <label>
+				      Off
+				      <input type="checkbox" name="allow_comments">
+				      <span class="lever"></span>
+				      On
+				    </label>
+				</div>
+			</div>
+		</div>
+		<div>
+			<input type="submit" value="Save"  class="btn"/>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	CKEDITOR.replace( 'body', {plugins: 'wysiwygarea,toolbar,basicstyles,link' });
+</script>

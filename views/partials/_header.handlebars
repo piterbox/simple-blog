@@ -1,0 +1,32 @@
+<nav class="grey darken-3">
+	<div class="container">
+		<div class="nav-wrapper">
+	      <a href="/" class="brand-logo center">StoryBooks</a>
+	      <a href="#" data-target="mobile-menu" class="sidenav-trigger left"><i class="fa fa-bars fa-2x"></i></a>
+	      <ul class="right hide-on-med-and-down">
+	       {{#if user}}
+				<li><a href="/dashboard">Wellcome, {{user.firstname}}!</a></li>
+				<li><a href="/auth/logout">Logout</a></li>
+			{{else}}
+				<li><a href="/stories"><i class="fa fa-book"></i> Public stories</a></li>
+				<li><a href="/auth/google"><i class="fa fa-google"></i> Login with Google</a></li>
+			{{/if}}
+	      </ul>
+	      <ul class="sidenav" id="mobile-menu">
+			{{#if user}}
+			{{else}}
+				<li><a href="/auth/google" class="btn red darken-1"><i class="fa fa-google"></i> Login with Google</a></li>
+				<li><a href="/stories"><i class="fa fa-book"></i> Public stories</a></li>
+				<li><a href="/auth/google"><i class="fa fa-google"></i> Login with Google</a></li>
+			{{/if}}
+	      	{{#if user}}
+	      		<li><a href="/stories"><i class="fa fa-book"></i> Public stories</a></li>
+	      		<li class="divider"></li>
+				<li><a href="/stories"><i class="fa fa-book"></i> Dashboard</a></li>
+				<li><a href="/stories/my"><i class="fa fa-user"></i> My stories</a></li>
+				<li><a href="/auth/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+	      	{{/if}}
+	      </ul>
+	    </div>
+	</div>
+</nav>
